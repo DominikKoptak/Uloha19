@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(162, 162, 175);
+        }
+        .inputy{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: solid black;
+            width: fit-content;
+            
+        }
+        textarea{
+            resize: none;
+        }
+        .inp{
+            background-color: rgb(129, 223, 145);
+            font-weight: bold;
+            margin: 15px;
+        }
+        div{
+            font-weight: bold;
+        }
+        .container{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: space-around;
+        }
+        .vysledky{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: space-around;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputy">
+            <textarea name="" id="textInput" cols="60" rows="25" class="inp"></textarea>
+            <button onclick="analyzujText()" class="inp">Analyzuj</button>
+            <input type="text" id="hladane" class="inp">
+            <button onclick="hladajvTexte()" class="inp" id="hladaj">Hľadať</button>
+            <button onclick="zasifrujText()" class="inp">Šifrovať</button>
+        </div>
+        <div class="vysledky">
+            <h1>Analýza:</h1>
+            <div id="analyza"></div>
+            <h1>Výsledok hľadania:</h1>
+            <div id="vysledokHladania"></div>
+            <h1>Zašifrovaný text:</h1>
+            <div id="sifra"></div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
